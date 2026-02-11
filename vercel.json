@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npx convex deploy --cmd 'vite build'",
+  "installCommand": "npm install",
+  "framework": "vite"
+}
