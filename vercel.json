@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npx convex deploy --cmd 'vite build'",
-  "installCommand": "npm install",
+  "buildCommand": "git remote add upstream https://github.com/inforeole/propulsmail.git && git fetch upstream main && git checkout upstream/main -- . && npm install && npx convex deploy --cmd 'vite build'",
   "framework": "vite"
 }
