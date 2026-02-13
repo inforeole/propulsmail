@@ -11,6 +11,16 @@
 3. Connecte automatiquement la base de données Convex
 4. Met en ligne votre site
 
+### Mises à jour automatiques
+
+Après le deploy, activez les mises à jour automatiques :
+
+1. Allez sur votre repo GitHub (celui créé par Vercel)
+2. Cliquez sur l'onglet **Actions**
+3. Cliquez sur **I understand my workflows, go ahead and enable them**
+
+C'est tout. Votre app se mettra à jour automatiquement toutes les 6 heures.
+
 ### Pré-requis
 
 - Un compte GitHub (gratuit) — [en créer un](https://github.com/signup)
