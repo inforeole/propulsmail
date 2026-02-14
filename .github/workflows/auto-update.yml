@@ -16,12 +16,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          cp .github/workflows/main.yml /tmp/main.yml
           git remote add upstream https://github.com/inforeole/propulsmail.git
           git fetch upstream main
-          git reset --hard upstream/main
-          mkdir -p .github/workflows
-          cp /tmp/main.yml .github/workflows/main.yml
+          git checkout upstream/main -- .
+          git checkout HEAD -- .github/workflows/main.yml
           git add -A
-          git diff --cached --quiet || git commit -m "sync upstream"
-          git push --force
+          git diff --cached --quiet || (git commit -m "sync upstream" && git push)
